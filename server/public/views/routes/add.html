@@ -1,12 +1,12 @@
-<p>
-  Add Page
-</p>
+<div class="container">
+<h2>Add Page</h2>
+
 <form ng-submit="submit(petObject)">
   <label for="petName">Name of Pet: </label>
   <input ng-model="petObject.name" id="petName" type="text" />
 
   <label for="petType">Species of Pet: </label>
-  <input ng-model="petObject.species" type="text" id="petType" />
+  <input ng-model="petObject.species" type="text" id="petType" /><br/>
 
   <label for="petAge">Age of Pet: </label>
   <input ng-model="petObject.age" type="text" id="petAge" />
@@ -16,3 +16,4 @@
 
   <input type="submit" value="Submit Information" />
 </form>
+</div>

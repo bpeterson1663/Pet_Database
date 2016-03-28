@@ -10,6 +10,7 @@ myApp.factory("Veterinarian", ["$http", function($http){
     $http.get("/getPets").then(function(response){
       console.log("Response Data", response.data);
       info.data = response.data;
+      //for data binding to work, key has to exist. You can't data bind to an object it has to be a key
       console.log("info : ", info.data);
       return info.data;
     });
@@ -27,11 +28,19 @@ myApp.factory("Veterinarian", ["$http", function($http){
     $http.post("/postPets", data).then(function(response){
       console.log(response.data);
     });
+    getAnimals();
   };
+
+  var deleteData = function(data){
+    $http.delete('/deletePet:' + data._id).then(function(response){
+      getAnimals();
+    });
+  }
 
   return {
     postAnimals : postAnimals,
     getAnimals : getAnimals,
+    deleteData : deleteData,
     info : info,
     greeting : greeting,
     initPets : initPets

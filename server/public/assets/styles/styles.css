@@ -1,5 +1,33 @@
+h1, h2, h3{
+  text-align: center;
+}
+
+.container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav li{
+  display: inline;
+  text-align: center;
+  margin: 0 10px;
+  list-style: none;
+}
+
 img {
   width:300px;
   height: auto;
   overflow: hidden;
+}
+
+.pet{
+  width: 500px;
+  background-color: #7e1c3c;
+  color: white;
+  margin: 30px auto;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 10px;
 }

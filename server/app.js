@@ -45,6 +45,15 @@ app.post("/postPets", function(req,res){
 
 });//end of post route
 
+app.delete('/deletePet/:id', function(req, res){
+    Pet.findOneAndRemove(req.params.id, function(err, data){
+      if(err){
+
+      }
+      res.send(data);
+    });
+});
+
 app.get('/*', function(req, res){
   var file = req.params[0] || "views/index.html";
   res.sendFile(path.join(__dirname, "/public/", file));

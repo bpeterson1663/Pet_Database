@@ -23,4 +23,10 @@ myApp.controller("AddController", ['$scope', 'Veterinarian', function($scope, Ve
       $scope.petArray = veterinarian.info;
       //console.log("Veterinarian info: ", veterinarian.info);
       console.log("Pet Array: ", $scope.petArray);
+
+      $scope.data = veterinarian.data;
+
+      $scope.delete = function(object){
+
+      };
 }]);
