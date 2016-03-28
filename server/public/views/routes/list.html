@@ -1,0 +1,8 @@
+<h1>List Page</h1>
+<div ng-repeat="object in petArray">
+  <h3>{{ object.name }}</h3>
+  <p> {{ object.species }}</p>
+  <p> {{ object.age }}</p>
+  <img ng-src="{{ object.image }}" alt="image" />
+
+</div>
