@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('port', (process.env.PORT || 5000));
 
 mongoose.connect('mongodb://localhost/pet_database');
-mongoose.model("Pet", new Schema({"name" : String, "animal" : String, "age" : Number, "image" : String}));
+mongoose.model("Pet", new Schema({"name" : String, "species" : String, "age" : Number, "image" : String}));
 var Pet = mongoose.model("Pet");
 
 app.get('/getPets', function(req, res) {
@@ -19,7 +19,6 @@ app.get('/getPets', function(req, res) {
     if(err){
       console.log(err);
     }
-
     res.send(data);
   });
 });
@@ -27,6 +26,8 @@ app.get('/getPets', function(req, res) {
 
 //Make Post to Monogo Database
 app.post("/postPets", function(req,res){
+    console.log("req.body is, ", req.body);
+
     var name = req.body.name;
     var species = req.body.species;
     var age = req.body.age;

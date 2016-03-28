@@ -12,11 +12,15 @@ myApp.controller("AddController", ['$scope', 'Veterinarian', function($scope, Ve
 
 
   myApp.controller("ShowController", ['$scope', 'Veterinarian', function($scope, Veterinarian){
+
       var veterinarian = Veterinarian;
+
+      veterinarian.initPets();
 
       veterinarian.getAnimals();
       //GET HERE
-      $scope.petArray = veterinarian.info.data;
-      console.log("Veterinarian info: ", veterinarian.info);
+      console.log("Veterinarian, " , veterinarian);
+      $scope.petArray = veterinarian.info;
+      //console.log("Veterinarian info: ", veterinarian.info);
       console.log("Pet Array: ", $scope.petArray);
 }]);
