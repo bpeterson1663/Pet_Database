@@ -1,5 +1,7 @@
-# pet_database
+# Pet Database
+This was our last weekend challenge at Prime Digital Academy. We were to use the MEAN stack to create an application that would store pet information such as name, type, age, and an image url. 
 
+##Directions
 Welcome to your final weekend challenge Kappa!
 
 In this challenge, you will be creating a Pet Application that allows a user to create Pets that are stored in a database. Then, in another view, the user can see the list of pets.
